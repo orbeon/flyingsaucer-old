@@ -278,6 +278,8 @@ public class SwingReplacedElementFactory implements ReplacedElementFactory {
      */
     public void reset() {
         forms = null;
+        // ORBEON
+        imageResourceLoader.clear();
         //imageComponents = null;
     }
 

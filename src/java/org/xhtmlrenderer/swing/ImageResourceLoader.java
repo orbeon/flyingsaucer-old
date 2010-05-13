@@ -35,7 +35,7 @@ public class ImageResourceLoader {
 
     private final int _imageCacheCapacity;
 
-    private RepaintListener _repaintListener = NO_OP_REPAINT_LISTENER;
+    private RepaintListener _repaintListener = NO_OP_REPAINT_LISTENER;  
 
 
     public ImageResourceLoader() {
@@ -98,6 +98,8 @@ public class ImageResourceLoader {
 
     public synchronized void clear() {
         _imageCache.clear();
+        // ORBEON
+        _loadQueue.kill();
     }
 
     public ImageResource get(final String uri) {
